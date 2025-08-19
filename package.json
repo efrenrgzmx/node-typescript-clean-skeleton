@@ -1,28 +1,46 @@
 {
+
   "name": "typescript-clean-skeleton",
-  "version": "1.0.0",
+
+  "version": "0.0.1",
+
   "description": "This is a basic node skeleton running with ES6 Typescript, it's ideal for startup projects that need this technology.",
-  "main": "app.js",
+
+  "main": "dist/app.js",
+
   "scripts": {
-    "build": "rimraf ./build && tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+
+    "build": "tsc",
+
+    "start": "node dist/app.js",
+
+    "dev": "tsc && nodemon --watch src --ext ts --exec \"tsc && node dist/app.js\"",
+
+    "watch": "tsc --watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/efrenrgzmx/node-typescript-clean-skeleton.git"
-  },
+
   "keywords": [],
+
   "author": "",
+
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/efrenrgzmx/node-typescript-clean-skeleton/issues"
-  },
-  "homepage": "https://github.com/efrenrgzmx/node-typescript-clean-skeleton#readme",
+
   "devDependencies": {
-    "@types/node": "^20.4.2",
-    "nodemon": "^3.0.1",
-    "rimraf": "^5.0.1",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.1.6"
+
+   
+    "@types/node": "^24.2.0",
+
+    "nodemon": "^3.1.10",
+
+    "ts-node-dev": "^2.0.0",
+
+    "typescript": "^5.9.2"
+
+  },
+
+  "dependencies": {
+    
   }
+
 }
+
